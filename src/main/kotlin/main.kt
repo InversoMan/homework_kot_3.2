@@ -37,7 +37,7 @@ fun commissionMastercardMaestro(transactionAmount: Long, lastMonthAmount: Long):
     } else if (transactionAmount in 300_00..75_000_00) {
         return "Комиссия составляет 0 коп."
     } else {
-        return "Комиссия составляет $count коп." //toInt
+        return "Комиссия составляет $count коп."
     }
 }
 
@@ -50,9 +50,10 @@ fun commissionVisaMir(transactionAmount: Long, lastMonthAmount: Long): String {
     } else if (count <= VISA_MIR_MIN_COMMISSION) {
         return "Комиссия составляет 3500 коп."
     } else {
-        return "Комисcия составляет $count коп." //toInt
+        return "Комиссия составляет $count коп."
     }
 }
+
 fun commissionVkPay(transactionAmount: Long, lastMonthAmount: Long): String {
     if (lastMonthAmount >= VK_PAY_LIMIT_MONTHLY) {
         return "Исчерпан лимит переводов за месяц! (40_000р.)"
