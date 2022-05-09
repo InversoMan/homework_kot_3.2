@@ -69,7 +69,8 @@ class MainKtTest {
             transactionAmount = amount,
             lastMonthAmount = total,
         )
-        assertEquals("Исчерпан лимит переводов за месяц! (600_000р)", result)
+        //assertEquals("Исчерпан лимит переводов за месяц! (600_000р)", result)
+        assertEquals(600_000_00, result)
     }
 
     @org.junit.Test
